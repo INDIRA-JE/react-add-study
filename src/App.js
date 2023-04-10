@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div></div>
+        <div className="number">{num}</div> {/** Style Class : number 적용 */}
         <button onClick={() => setNum((num = num + 1))}>버튼</button>
       </header>
     </div>
