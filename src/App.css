@@ -1,9 +1,9 @@
 /* Style Class 적용 */
 .App {
-  /* ?? 바깥쪽 여백 */
-  /* margin: 0 auto; */
+  /* 2. 바깥쪽 여백 */
+  margin: 200px auto;
   /* 2. 바깥위쪽 여백 */
-  margin-top: 200px;
+  /* margin-top: 200px; */
   /* 1. 텍스트 정렬 방향 */
   text-align: center;
   /* ?? 가로(width) 길이(height(세로 길이)) */
