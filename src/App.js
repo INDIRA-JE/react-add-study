@@ -131,3 +131,44 @@ import "./App.css";
 // };
 
 // export default App;
+// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+// 8. input 태그
+//    - 페이지 이동 없이 수정
+const App = () => {
+  //* 2. 데이터 담겨지는 부분
+  const [text, setText] = useState("222222");
+  const [edit, setEdit] = useState(false); // 수정 모드를 판별
+  // console.log("text : ", text);
+  console.log("edit : ", edit);
+
+  //* 3. text를 content 변수에 담아버림
+  let content = (
+    <div>
+      {text}
+      <button onClick={() => setEdit(true)}>수정</button>
+    </div>
+  );
+
+  //* 4. 값에 따라 결과값 도출
+  if (edit) {
+    content = (
+      <div>
+        <input
+          type="text"
+          value={text}
+          onChange={(e) => {
+            console.log("text : ", text);
+            setText(e.target.value);
+          }}
+        />
+        <button onClick={() => setEdit(false)}>수정</button>
+      </div>
+    );
+  }
+
+  //* 1. 사용자에게 보여지고, 실행되는 부분
+  return <>{content}</>;
+};
+
+export default App;
