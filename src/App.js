@@ -131,35 +131,3 @@ import "./App.css";
 // };
 
 // export default App;
-
-// ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
-
-// 8. input 태그
-//    - 페이지 이동 없이 수정
-const App = () => {
-  const [text, setText] = useState("");
-  // 수정 모드를 판별
-  const [edit, setEdit] = userState(false);
-
-  //
-  let content = <div>{text}</div>;
-
-  if (edit) {
-  }
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => {
-          console.log(text);
-          setText(e.target.value);
-        }}
-      />
-      <button>수정</button>
-    </div>
-  );
-};
-
-export default App;
